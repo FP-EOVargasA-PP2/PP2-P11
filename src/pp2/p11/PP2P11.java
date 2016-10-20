@@ -33,7 +33,7 @@ public class PP2P11 {
     }
     public static String [] calcular (int n){
         String [] r = new String[8000];
-        int s, p, t, u, v, w, x;
+        int s, p, t, u, v, w, x, k;
         s = 0;
         p = 0;
         t = 0;
@@ -41,7 +41,8 @@ public class PP2P11 {
         v = 0;
         w = 0;
         x = 0;
-        for (int k = 0; k > n; k++){
+        k = 1;
+        do{
             if (k >= 1 + s && k < 4 + s){
                 r [p] = "I";
             }
@@ -189,8 +190,6 @@ public class PP2P11 {
                 p = p - 1;
                 r [p] = " ";
                 p = p - 1;
-                r [p] = " ";
-                p = p - 1;
                 r [p] = "C";
                 p = p + 1;
                 r [p] = "M";
@@ -220,12 +219,13 @@ public class PP2P11 {
                 x = x + 1000;
             }
             p = p + 1;
-        }
+            k++;
+        }while(k <= n);
         return r;
     }
     public static int calcular2 (int n){
         String [] r = new String[8000];
-        int s, p, t, u, v, w, x;
+        int s, p, t, u, v, w, x, k;
         s = 0;
         p = 0;
         t = 0;
@@ -233,7 +233,8 @@ public class PP2P11 {
         v = 0;
         w = 0;
         x = 0;
-        for (int k = 0; k > n; k++){
+        k = 1;
+        do {
             if (k >= 1 + s && k < 4 + s){
                 r [p] = "I";
             }
@@ -381,8 +382,6 @@ public class PP2P11 {
                 p = p - 1;
                 r [p] = " ";
                 p = p - 1;
-                r [p] = " ";
-                p = p - 1;
                 r [p] = "C";
                 p = p + 1;
                 r [p] = "M";
@@ -412,7 +411,8 @@ public class PP2P11 {
                 x = x + 1000;
             }
             p = p + 1;
-        }
+            k++;
+        }while (k <= n);
         return p;
     }
     public static void mostrar (String r [], int p, int n){
